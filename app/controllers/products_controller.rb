@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
 
-  before_action :ensure_logged_in, :except => [:show]
+  before_action :ensure_logged_in, :except => [:show, :index]
 
   def index
     @products = Product.all
@@ -24,7 +24,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(product_params)
+    @product = current_user.products.new(product_params)
 
     if @product.save
       redirect_to products_url
