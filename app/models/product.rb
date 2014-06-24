@@ -7,4 +7,7 @@ class Product < ActiveRecord::Base
     sprintf("%.2f", price_in_dollars)
   end
 
+  has_many :reviews
+  has_many :users, :through => :reviews
+
 end
