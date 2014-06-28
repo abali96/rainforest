@@ -1,6 +1,6 @@
 == Rainforest - Amazon Clone
 
-Bitmaker Labs assignment: "Rainforest" was our second practical with Rails, building on several key concepts not covered in the simplistic CRUD app that was Photogur.
+Bitmaker Labs assignment: "Rainforest" was our second practical with Rails, building on several key concepts:
 
 * Routes and nested resources/forms
 
