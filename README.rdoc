@@ -13,3 +13,5 @@ Bitmaker Labs assignment: "Rainforest" was our second practical with Rails, buil
 * Database associations
 
 * View helpers and partials
+
+* Callbacks
