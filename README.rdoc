@@ -1,28 +1,15 @@
-== README
+== Rainforest - Amazon Clone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Bitmaker Labs assignment: "Rainforest" was our second practical with Rails, building on several key concepts not covered in the simplistic CRUD app that was Photogur.
 
-Things you may want to cover:
+* Routes and nested resources/forms
 
-* Ruby version
+* Authentication (Login and Signup) with bcrypt
 
-* System dependencies
+* Authorization 
 
-* Configuration
+* Testing
 
-* Database creation
+* Database associations
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* View helpers and partials
