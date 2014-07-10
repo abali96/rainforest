@@ -9,17 +9,11 @@ class ProductsController < ApplicationController
       Product.all
     end
 
-
-    if request.xhr?
-      render @products
+    respond_to do |format|
+      format.html
+      format.js
+      format.json { render json: @products } #this automatically calls to_json on the response
     end
-
-    # IN ORDER TO DO THE $.getScript, uncomment below AND comment the request.xhr?
-    # respond_to do |format|
-    #   format.html
-    #   format.js
-    #   format.json { render json: @products } #this automatically calls to_json on the response
-    # end
   end
 
   def show
