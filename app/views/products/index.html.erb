@@ -1,7 +1,16 @@
+<%= form_tag products_path, method: :get, authentication: false, id: 'search-form' do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
 <h1>All Products</h1>
 
-<% @products.each do |product| %>
- <p><%= link_to product.name, product_path(product) %></p>
- <% end %>
+<div id="products">
+  <%= render @products %>
+</div>
 
- <%= link_to "Add product", new_product_path %>
+<%= link_to "Add product", new_product_path %>
+
+<script type="text/javascript">
+
+</script>
