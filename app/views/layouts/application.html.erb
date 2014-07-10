@@ -19,7 +19,8 @@
 
     <p class="userinfo">
       <% if current_user %>
-        Signed in as <%= current_user.name %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
+        Signed in as <%= current_user.name %>.
+        <p><%= link_to "Add product", new_product_path %></p> <p><%= link_to "Log out", session_path("current"), :method => :delete %></p>
       <% else %>
         <%= link_to "Log in", new_session_path %> or <%= link_to "Sign Up", new_user_path %>
       <% end %>
