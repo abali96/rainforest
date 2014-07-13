@@ -32,3 +32,15 @@
 <% else %>
   <p>Please <%= link_to 'log in', new_session_path %> to add a review or edit this product.</p>
 <% end %>
+
+<script type="text/javascript">
+  $(function() {
+    $('#new_review')
+      .on('ajax:beforeSend', function() {
+        $("input[type='submit']").val("Saving...").attr("disabled", "disabled");
+      })
+      .on('ajax:complete', function() {
+        $("input[type='submit']").val("Create Review").removeAttr('disabled');
+      });
+  });
+</script>
