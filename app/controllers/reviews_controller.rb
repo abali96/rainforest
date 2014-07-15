@@ -16,9 +16,11 @@ class ReviewsController < ApplicationController
       if @review.save
         format.html { redirect_to product_path(@product.id), :notice => "Review created successfully" }
         format.js {} #looks for reviews/create.js.erb
+        format.json { render json: @review, include: :user } # render json for that object # you can do :user because a review belongs to a user
       else
         format.html { render 'products/show', :alert => "Oops! Something went wrong!"  }
         format.js {}
+        format.json { render json: @review } # render json for that object
       end
     end
   end

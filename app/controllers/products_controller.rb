@@ -12,6 +12,7 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.html
       format.js
+      format.json { render json: @review } # render json for that object
     end
   end
 
@@ -28,10 +29,6 @@ class ProductsController < ApplicationController
     @product = Product.new
   end
 
-  def edit
-    @product = Product.find(params[:id])
-  end
-
   def create
     @product = current_user.products.new(product_params)
 
@@ -40,6 +37,10 @@ class ProductsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @product = Product.find(params[:id])
   end
 
   def update
